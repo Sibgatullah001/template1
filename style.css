@@ -102,7 +102,6 @@ header{
     border-radius: 15px;
 }
 /* app  */
-
 .app_contents{
     display: flex;
     flex-wrap: wrap;
@@ -120,7 +119,7 @@ header{
     color: red;
 }
 /* ------- recommended ------- */
-.app_contents , .recommended{
+.app_contents, .recommended{
     padding: 20px 0;
 }
 .recommended_contents{
@@ -129,10 +128,10 @@ header{
     flex-wrap: wrap;
     padding-top: 20px;
 }
-.recommended_item{
+.recommended_item {
+    width: 40%;
     display: flex;
     gap: 10px;
-    width: 40%;
     padding: 20px 30px;
     cursor: pointer;
     transition: .6s;
@@ -154,4 +153,26 @@ footer{
 }
 footer span{
     padding-left: 10px;
+}
+
+/* responsive */
+@media screen and (max-width: 768px){
+    .recommended_item{
+        width: 100%;
+    }
+    .app i, .recommended i {
+        font-size: 30px;
+    }
+    h2{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 576px){
+    .menu .nav_list{
+        gap: 1rem;
+    }
+    .app_item {
+        width: 93px;
+        padding: 10px 0;
+      }
 }
