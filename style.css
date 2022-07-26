@@ -1,7 +1,19 @@
+@font-face {
+    font-family: 'Nunito Sans', sans-serif;
+    src:url('assets/Nunito_Sans/NunitoSans-Regular.ttf'), 
+         url('assets/Nunito_Sans/NunitoSans-Black.ttf'),
+         url('assets/Nunito_Sans/NunitoSans-Bold.ttf'),
+         url('assets/Nunito_Sans/NunitoSans-ExtraBold.ttf'),
+         url('assets/Nunito_Sans/NunitoSans-ExtraLight.ttf'),
+         url('assets/Nunito_Sans/NunitoSans-Light.ttf'),
+         url('assets/Nunito_Sans/NunitoSans-SemiBold.ttf')
+}
+
 body{
     margin: 0;
     color: #414141;
     background: #ccc;
+    font-family: 'Nunito Sans', sans-serif;
 }
 h1,h2,h3,h4,h5,p{
     margin: 0;
@@ -55,9 +67,8 @@ header{
     left: 50%;
     transform: translate(-50%);
 }
-.nav_icon{
+.nav_icon img{
     cursor: pointer;
-    font-size: 25px;
 }
 
 
@@ -75,6 +86,7 @@ header{
     background-color: #d4ddec;
     display: none;
     font-size: 14px;
+    z-index: 1;
 }
 .menu p{
     font-size: 11px;
@@ -94,11 +106,12 @@ header{
     display: flex;
     justify-content: end;
 }
-.cross_icon i{
+.cross_icon img {
     background-color: #fff;
     border-radius: 50%;
-    font-size: 30px;
+    width: 23px;
     cursor: pointer;
+    padding: 3px;
 }
 .menu .nav_link:hover::after{
     background-color: #3b3bf5;
@@ -165,7 +178,12 @@ header{
     background-color: #fff;
     border-radius: 10px;
 }
-/* .main */
+/* search */
+.searchs {
+    position: fixed;
+    width: 100%;
+    top: 150px;
+}
 .search_box {
     position: relative;
     max-width: 450px;
@@ -201,6 +219,12 @@ header{
     right: 0;
     display: none;
 }
+.search_popup_data{
+    max-height: 400px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+}
 .search_cors{
     position: absolute;
     right: 1.5rem;
@@ -226,7 +250,7 @@ header{
 }
 .drop_ab{
     position: relative;
-    padding: 0 20px;
+    margin: 20px 0;
 }
 
 .drop_ab::after {
@@ -247,13 +271,17 @@ header{
     height: 1px;
     top: 50%;
     background: #c1c1c1;
+    left: 20px;
 }
-.dropzone_url {
+.dropzone_url input {
     background: white;
-    padding: 8px;
+    padding: 10px;
     border: 1px solid #bdbdbd;
     border-radius: 5px;
     margin: 10px 10px 0;
+    outline: none;
+    text-align: center;
+    width: 300px;
 }
 .search_popup_img {
     margin-top: 20px;
@@ -307,8 +335,8 @@ footer span{
         font-size: 25px;
     }
 }
-@media screen and (max-height: 500px){
-    .search_popup{
+@media screen and (max-height: 576px){
+    .search_popup_data{
         max-height: 110px;
         overflow-x: hidden;
         overflow-y: scroll;

@@ -23,7 +23,7 @@
                 </div>
 
                 <div class="nav_icon" onclick="togglePopup()">
-                    <i class='bx bx-menu'></i>
+                    <img src="assets/feather/menu.svg" alt="">
                 </div>
             </nav>
         </header>
@@ -31,7 +31,7 @@
         <section class="menu" id="menu">
             <div class="menu_data">
                 <div class="container">
-                    <div class="cross_icon" onclick="crossPopup()"><i class='bx bx-x'></i></div>
+                    <div class="cross_icon" onclick="crossPopup()"><img src="assets/feather/x.svg" alt=""></div>
                     <nav class="nav">
                         <ul class="nav_list">
                             <li><a href="#" class="nav_link" onclick="allSection()">All</a></li>
@@ -251,8 +251,8 @@
             
         </section>
 
-        <main>
-            <div class="search_box" style=" margin-top: 100px;">
+        <div class="searchs">
+            <div class="search_box">
                 <form action="" class="search_form">
                     <input type="search" class="search" id="search">
                     <div class="search_icon">
@@ -260,6 +260,9 @@
                         <i class='bx bx-image' onclick="searchImg()" ></i>
                         <i class='bx bx-search-alt-2'></i>
                     </div>
+                    <ul class="form_list">
+                        <li><span></span></li>
+                    </ul>
                 </form>
                 <div class="search_popup" id="searchPopup">
                     <div class="search_cors" onclick="searchImgClose()">X</div>
@@ -273,7 +276,8 @@
                             </div>
                             <div class="drop_ab">OR</div>
                             <div class="dropzone_url">
-                                <p>Past image or URL</p>
+                                <input type="url" placeholder="Past image or URL">
+                                <!-- <p><img src="assets/feather/clipboard.svg" alt=""> Past image or URL</p> -->
                             </div>
                         </div>
                         <p>Click a sample image to try it</p>
@@ -290,7 +294,7 @@
                     </div>
                 </div>
             </div>
-        </main>
+        </div>
 
 
         <!-- ------- Footer ------- -->
