@@ -12,20 +12,23 @@
     <div class="wrap">
         <!-- ------- Header ------- -->
         <header>
-            <nav class="nav">
-                <div class="nav_menu">
-                    <ul class="nav_list">
-                        <li><a href="#" class="nav_link">Web</a></li>
-                        <li><a href="#" class="nav_link">Images</a></li>
-                        <li><a href="#" class="nav_link">Videos</a></li>
-                        <li><a href="#" class="nav_link">News</a></li>
-                    </ul>
-                </div>
-
-                <div class="nav_icon" onclick="togglePopup()">
-                    <img src="assets/feather/menu.svg" alt="">
-                </div>
-            </nav>
+            <div class="container">
+               <nav class="nav">
+                   <div class="nav_menu">
+                       <ul class="nav_list">
+                           <li><a href="#" class="nav_link">Web</a></li>
+                           <li><a href="#" class="nav_link">Images</a></li>
+                           <li><a href="#" class="nav_link">Videos</a></li>
+                           <li><a href="#" class="nav_link">News</a></li>
+                       </ul>
+                   </div>
+   
+                   <div class="nav_icon" onclick="togglePopup()">
+                       <img src="assets/feather/menu.svg" alt="">
+                   </div>
+               </nav>
+                
+            </div>
         </header>
         <!-- ------- Menu ------- -->
         <section class="menu" id="menu">
@@ -245,7 +248,6 @@
         
                     </div>
                 </div>
-                </div>
             </div>
             
             
@@ -296,26 +298,199 @@
             </div>
         </div>
 
-
-        <!-- ------- Footer ------- -->
-        <footer>
-            <div class="nav">
-                <ul class="nav_list">
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Admin</a></li>
+        <div class="customize_edit" onclick="customizeEdit()">
+            <img src="assets/feather/edit-2.svg" alt=""><Span>Customize Chrome</Span>
+        </div>
+        
+        <div class="customize_popup" id="customizePopup">
+            <div class="customize_data">
+                <ul class="customize_menu">
+                    <li onclick="customizeBg()"><img src="assets/feather/image.svg" alt=""> Background</li>
+                    <li onclick="customizeShortcuts()"><img src="assets/feather/link-2.svg" alt=""> Shortcuts</li>
+                    <li onclick="customizeColor()"><img src="assets/feather/image.svg" alt=""> Color and theme</li>
                 </ul>
+
+                <div class="customize_Bg">
+                    <h4>Customize this page</h4>
+
+                    <div class="customize_shortcut">
+                        <div  id="customizeContents">
+                           <div class="customize_contents">
+                               <div class="customize_content upload">
+                                   <img src="assets/feather/upload.svg" alt="">
+                                   <h5>Upload Image</h5>
+                               </div>
+                               <div class="customize_content">
+                                <img src="assets/img/customizeBg2.jpg" alt="">
+                                   <h5>Lorem, ipsum</h5>
+                               </div>
+                               <div class="customize_content">
+                                <img src="assets/img/customizeBg3.jpg" alt="">
+                                   <h5>Lorem, ipsum</h5>
+                               </div>
+                               <div class="customize_content">
+                                <img src="assets/img/customizeBg4.jpg" alt="">
+                                   <h5>Lorem, ipsum</h5>
+                               </div>
+                               <div class="customize_content">
+                                <img src="assets/img/customizeBg5.jpg" alt="">
+                                   <h5>Lorem, ipsum</h5>
+                               </div>
+                               <div class="customize_content">
+                                <img src="assets/img/customizeBg6.jpg" alt="">
+                                   <h5>Lorem, ipsum</h5>
+                               </div>
+                               <div class="customize_content">
+                                <img src="assets/img/customizeBg7.jpg" alt="">
+                                   <h5>Lorem, ipsum</h5>
+                               </div>
+                               <div class="customize_content">
+                                <img src="assets/img/customizeBg5.jpg" alt="">
+                                   <h5>Lorem, ipsum</h5>
+                               </div>
+                           </div>
+
+                        </div>
     
-                <div class="copy_write">
-                    <p>Powered by phpSearch <span> @2019 phpSearch</span></p>
+                        <div class="shortcut" id="shortcut">
+                            <div class="shortcut_contents">
+                                <div class="shortcut_contents_data">
+                                   <div class="shortcut_content">
+                                       <div class="shortcut_browser">
+                                           <img src="assets/img/colored_header.svg" alt="">
+                                           <img src="assets/img/shortcut_circles.svg" alt="">
+                                       </div>
+                                       <div class="shortcut_user"><img src="assets/feather/user.svg" alt=""></div>   
+                                       <div class="shortcut_check"><img src="assets/feather/check.svg" alt=""></div>   
+                                   </div>
+                                    <h4>My shortcuts</h4>
+                                    <p>shortcuts are curated by you</p>
+                                </div>
+                                
+    
+                                <div class="shortcut_contents_data">
+                                   <div class="shortcut_content">
+                                       <div class="shortcut_browser">
+                                           <img src="assets/img/colored_header.svg" alt="">
+                                           <img src="assets/img/shortcut_circles.svg" alt="">
+                                       </div>
+                                       <div class="shortcut_user"><img src="assets/feather/users.svg" alt=""></div>   
+                                       <div class="shortcut_check"><img src="assets/feather/check.svg" alt=""></div>   
+                                   </div>
+                                    <h4>My shortcuts</h4>
+                                    <p>shortcuts are curated by you</p>
+                                </div>
+                           </div>
+
+                           <div class="shortcut_hide">
+                            <img src="assets/feather/eye-off.svg" alt="">
+                            <div>
+                                <h4>Hide shortcuts</h4>
+                                <p>Don't show shortcuts on this page</p> 
+                            </div>
+                            <div class="shortcut_toggle">
+                                <img src="assets/feather/toggle-left.svg" alt="">
+                            </div> 
+                           </div>
+                        </div>
+                        <div class="customize_theme" id="customizeTheme">
+                            <div class="theme_contents">
+                                <div class="theme_content theme_edit"><img src="assets/feather/edit-2.svg" alt=""></div>
+                                <div class="theme_content"><img src="assets/img/gradienta2.jpg" alt=""></div>
+                                <div class="theme_content"><img src="assets/img/gradienta3.jpg" alt=""></div>
+                                <div class="theme_content"><img src="assets/img/gradienta4.jpg" alt=""></div>
+                                <div class="theme_content"><img src="assets/img/gradienta5.jpg" alt=""></div>
+                                <div class="theme_content"><img src="assets/img/gradienta6.jpg" alt=""></div>
+                                <div class="theme_content"><img src="assets/img/gradienta3.jpg" alt=""></div>
+                                <div class="theme_content"><img src="assets/img/gradienta4.jpg" alt=""></div>
+                                <div class="theme_content"><img src="assets/img/gradienta5.jpg" alt=""></div>
+                                <div class="theme_content"><img src="assets/img/gradienta6.jpg" alt=""></div>
+                                <div class="theme_content"><img src="assets/img/gradienta6.jpg" alt=""></div>
+                                <div class="theme_content"><img src="assets/img/gradienta3.jpg" alt=""></div>
+                                <div class="theme_content"><img src="assets/img/gradienta4.jpg" alt=""></div>
+                                <div class="theme_content"><img src="assets/img/gradienta5.jpg" alt=""></div>
+                                <div class="theme_content"><img src="assets/img/gradienta6.jpg" alt=""></div>
+                                <div class="theme_content"><img src="assets/img/gradienta6.jpg" alt=""></div>
+                                <div class="theme_content"><img src="assets/img/gradienta3.jpg" alt=""></div>
+                                <div class="theme_content"><img src="assets/img/gradienta4.jpg" alt=""></div>
+                                <div class="theme_content"><img src="assets/img/gradienta5.jpg" alt=""></div>
+                                <div class="theme_content"><img src="assets/img/gradienta6.jpg" alt=""></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="customize_btn">
+                        <div class="customize_close" onclick="customizeClose()">Close</div>
+                        <div class="customize_close">Done</div>
+                    </div>
                 </div>
             </div>
-        </footer>
+        </div>
+
+        <!-- browse add  -->
+        <div class="brose_web">
+            <div class="brose_contents">
+
+                <div class="brose_content">
+                   <div class="brose_head"><h4>S</h4></div> 
+                    <div class="brose_link"><a href="#">Link</a></div>
+                    <div class="brose_menu" onclick="broseMenu()"><img src="assets/feather/more-vertical.svg" alt=""></div>
+                    <div class="browse_edit" id="browseEdit">
+                        <h4>Edit shortcut</h4>
+                        <h4>Remove</h4>
+                    </div>
+                </div>
+                <div class="brose_content">
+                   <div class="brose_head"><h4>S</h4></div> 
+                    <div class="brose_link"><a href="#">Link</a></div>
+                    <div class="brose_menu" onclick="broseMenu()"><img src="assets/feather/more-vertical.svg" alt=""></div>
+                    <div class="browse_edit" id="browseEdit">
+                        <h4>Edit shortcut</h4>
+                        <h4>Remove</h4>
+                    </div>
+                </div>
+                <div class="brose_content">
+                   <div class="brose_head"><h4>S</h4></div> 
+                    <div class="brose_link"><a href="#">Link</a></div>
+                    <div class="brose_menu" onclick="broseMenu()"><img src="assets/feather/more-vertical.svg" alt=""></div>
+                    <div class="browse_edit" id="browseEdit">
+                        <h4>Edit shortcut</h4>
+                        <h4>Remove</h4>
+                    </div>
+                </div>
+                
+                
+                <div class="brose_content">
+                    <div class="brose_add"><img src="assets/feather/plus-circle.svg" alt=""></div>
+                    
+                    <div class="brose_link"><a href="#">Add shortcut </a></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    <!-- ------- Footer ------- -->
+    <footer>
+        <div class="container">
+           <div class="nav">
+               <ul class="nav_list">
+                   <li><a href="#">Contact</a></li>
+                   <li><a href="#">About</a></li>
+                   <li><a href="#">Admin</a></li>
+               </ul>
+   
+               <div class="copy_write">
+                   <p>Powered by phpSearch <span> @2019 phpSearch</span></p>
+               </div>
+           </div>
+
+        </div>
+    </footer>
+        
     </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="custom.js"></script>
+     <script src="custom.js"></script>
     
 </body>
 </html>

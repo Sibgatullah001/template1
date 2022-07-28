@@ -51,3 +51,38 @@ function searchImg(){
 function searchImgClose(){
     searchPopup.style.display = 'none';
 }
+
+// customize
+const customizeContents = document.getElementById('customizeContents');
+const shortcut = document.getElementById('shortcut');
+const customizeTheme = document.getElementById('customizeTheme');
+function customizeBg(){
+    customizeContents.style.display = 'block';
+    shortcut.style.display = 'none';
+    customizeTheme.style.display = 'none';
+}
+function customizeShortcuts(){
+    customizeContents.style.display = 'none';
+    shortcut.style.display = 'block';
+    customizeTheme.style.display = 'none';
+}
+function customizeColor(){
+    customizeContents.style.display = 'none';
+    shortcut.style.display = 'none';
+    customizeTheme.style.display = 'block';
+}
+
+// customize close show
+const customizePopup = document.getElementById('customizePopup');
+function customizeEdit(){
+    customizePopup.style.display = 'block';
+}
+function customizeClose(){
+    customizePopup.style.display = 'none';
+}
+// browse show hidden
+const browseEdit = document.querySelector('.browse_edit')
+
+function broseMenu() {
+    browseEdit.classList.toggle("browseEdit_show");
+}

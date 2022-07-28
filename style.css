@@ -11,8 +11,8 @@
 
 body{
     margin: 0;
-    color: #414141;
-    background: #ccc;
+    color: #464646;
+    background: #fff;
     font-family: 'Nunito Sans', sans-serif;
 }
 h1,h2,h3,h4,h5,p{
@@ -27,27 +27,32 @@ ul{
     padding: 0;
     list-style: none;
 }
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
 
 /* ------- header ------- */
-.wrap{
+.wrap {
     position: relative;
+    height: 100vh;
 }
-header{
-    position: fixed;
+header {
+    position: absolute;
     width: 100%;
     top: 0;
+    background-color: #f0f0f0;
 }
 
 .nav, .nav_list{
     display: flex;
     gap: 2rem;
-    
     flex-wrap: wrap;
 }
-.nav{
+.nav {
     justify-content: space-between;
-    background-color: #f0f0f0;
-    padding: 15px;
+    align-items: center;
+    padding: 10px 20px;
 }
 .nav_link{
     position: relative;
@@ -73,27 +78,26 @@ header{
 
 
 /* ------- Menu ------- */
-.wrap{
-    position: relative;
-}
 .menu{
     position: absolute;
     max-width: 800px;
-    border-radius: 10px;
+    height: 95vh;
+    overflow-y: scroll;
+    z-index: 1;
     top: 20px;
     left: 20px;
-    padding: 20px 0 40px;
+    border-radius: 10px;
     background-color: #d4ddec;
     display: none;
     font-size: 14px;
-    z-index: 1;
 }
 .menu p{
     font-size: 11px;
 }
-.container{
+.menu_data{
     width: 90%;
     margin: 0 auto;
+    padding: 20px 0 40px;
 }
 .menu .nav{
     padding: 15px 0;
@@ -180,17 +184,18 @@ header{
 }
 /* search */
 .searchs {
-    position: fixed;
+    position: absolute;
     width: 100%;
     top: 150px;
 }
 .search_box {
     position: relative;
-    max-width: 450px;
+    max-width: 550px;
     margin: 0 auto;
-    background: #f6f6f6;
+    background: #fff;
     padding: 10px;
     border-radius: 10px;
+    box-shadow: 0 0 4px gray;
 }
 .search_form {
     display: flex;
@@ -199,7 +204,7 @@ header{
 .search {
     outline: none;
     border: none;
-    background: #f6f6f6;
+    background: #fff;
     width: 75%;
     padding: 8px 10px;
     font-size: 15px;
@@ -225,11 +230,12 @@ header{
     overflow-y: scroll;
 
 }
-.search_cors{
+.search_cors {
     position: absolute;
-    right: 1.5rem;
-    top: 1rem;
+    right: 2rem;
+    top: .5rem;
     cursor: pointer;
+    font-size: 20px;
 }
 .sbiIdc {
     position: absolute;
@@ -239,7 +245,7 @@ header{
     background: #f6f6f6;
     transform: rotate(45deg);
     top: -10px;
-    right: 3rem;
+    right: 80px;
 }
 .dropzone {
     background: #e3e3e3;
@@ -293,13 +299,273 @@ header{
     border-radius: 4px;
     cursor: pointer;
 }
-/* ------- Footer ------- */
-footer{
-    position: fixed;
-    width: 100%;
-    right: 0;
-    bottom: 0;
+/* ------- Customize browser------- */
+
+.customize_edit {
+    position: absolute;
+    right: 64px;
+    bottom: 64px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: #fff;
+    padding: 8px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 4px gray;
+    cursor: pointer;
+}
+.customize h4 img{
+    color: #a0a2ff;
+}
+
+/* customize Popup  */
+.customize_popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.customize_data {
+    width: 700px;
+    background: #ffffff;
+    box-shadow: 0 0 4px gray;
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    border-radius: 10px;
+}
+.customize_menu img {
+    margin-bottom: -8px;
+    max-width: 140px;
+}
+.customize_menu {
+    margin-top: 20px;
+}
+.customize_menu li {
+    background: #eaeaea;
+    box-shadow: 0 0 4px gray;
+    padding: 7px 0 10px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 180px;
+    margin-top: 20px;
+}
+.customize_Bg h4{
+    padding: 10px 0;
+}
+.customize_shortcut {
+    height: 400px;
+    overflow-y: scroll;
+    padding: 0 10px;
+}
+.customize_contents {
+    display: flex;
+    gap: 20px 10px;
+    flex-wrap: wrap;
+}
+.customize_content {
+    width: 31%;
+    cursor: pointer;
+}
+.customize_content img {
+  width: 100%;
+}
+.customize_content h5{
+    margin-top: 10px;
+}
+.upload {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #cecece;
+    margin-bottom: 30px;
+}
+.upload img {
+    width: 50px;
+}
+
+/* browser */
+.shortcut, .customize_theme{
+    display: none;
+}
+.shortcut_contents {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.shortcut_content {
+    display: flex;
+    cursor: pointer;
+    background: gray;
+    padding: 20px 0px 20px 25px;
+    width: 180px;
+    justify-content: center;
+    border-radius: 10px;
+    transition: .5s;
+    border: 1px solid #6f6fff;
+    position: relative;
+    z-index: 0;
+}
+.shortcut_content:hover {
+    background: #1d1c2285;
+}
+.shortcut_browser {
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    background: #373737;
+    gap: 30px;
+    padding: 20px;
+    border: 2px solid #465c71;
+    border-radius: 5px;
+}
+.shortcut_user {
+    position: absolute;
     z-index: -1;
+    left: 20px;
+    bottom: 54px;
+}
+.shortcut_user img {
+    width: 70px;
+}
+.shortcut_check {
+    position: absolute;
+    right: 35px;
+    background: #bdbdbd;
+    border-radius: 50%;
+    padding: 0px 2px;
+    top: 9px;
+}
+.shortcut_hide {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    background: #6f6f6f;
+    padding: 5px 20px 15px;
+    color: white;
+    margin: 20px 0;
+    border-radius: 10px;
+    position: relative;
+}
+.shortcut_toggle {
+    position: absolute;
+    right: 25px;
+}
+.theme_contents {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.theme_content img{
+    border-radius: 50%;
+}
+.theme_edit img {
+    padding: 25px;
+    background: #c1c1c1;
+}
+
+.customize_btn {
+  display: flex;
+  gap: 20px;
+  justify-content: end;
+  margin: 20px 0;
+}
+.customize_btn div {
+    box-shadow: 0 0 4px gray;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.customize_btn div:hover {
+    background-color: #cccccc;
+}
+
+
+.brose_web {
+    padding-top: 243px;
+    max-width: 650px;
+    margin: 0 auto;
+}
+.brose_contents{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.brose_content {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    background: gray;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    padding-top: 15px;
+  }
+.brose_head {
+    background: #474747;
+    border-radius: 50%;
+    padding: 13px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.brose_head h4 {
+    background: green;
+    border-radius: 50%;
+    padding: 0px;
+}
+.brose_link {
+    margin-top: 20px;
+    font-weight: 600;
+}
+.brose_menu {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    cursor: pointer;
+}
+.brose_menu:hover {
+    padding: 0px 2px;
+    background: #b9b9b9;
+    border-radius: 50%;
+}
+.browse_edit {
+    background: #3c3c3c;
+    position: absolute;
+    width: 160px;
+    text-align: left;
+    padding: 10px 0px;
+    border-radius: 5px;
+    top: 30px;
+    left: -14px;
+    display: none;
+}
+.browseEdit_show{
+    display: block;
+}
+.browse_edit h4 {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.browse_edit h4:hover{
+    background-color: gray;
+}
+.brose_add img {
+    width: 50px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+/* ------- Footer ------- */
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background: #f0f0f0;
 }
 footer span{
     padding-left: 10px;
@@ -319,6 +585,9 @@ footer span{
     h2{
         font-size: 14px;
     }
+    .customize_data {
+        max-width: 550px;
+    }
 }
 @media screen and (max-width: 576px){
     .nav_list{
@@ -334,11 +603,26 @@ footer span{
     .search_box i {
         font-size: 25px;
     }
+    .customize_contents {
+        justify-content: center;
+    }
+    .customize_content {
+        width: 25%;
+    }
+    .customize_data {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
 }
 @media screen and (max-height: 576px){
     .search_popup_data{
         max-height: 110px;
         overflow-x: hidden;
         overflow-y: scroll;
+    }
+    .customize_shortcut {
+        height: 250px;
+        overflow-y: scroll;
+        padding: 0 10px;
     }
 }
