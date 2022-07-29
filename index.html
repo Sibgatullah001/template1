@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="wrap">
+    <div class="wrap" id="wrap">
         <!-- ------- Header ------- -->
         <header>
             <div class="container">
@@ -23,7 +23,7 @@
                        </ul>
                    </div>
    
-                   <div class="nav_icon" onclick="togglePopup()">
+                   <div class="nav_icon" id="toggleIcon">
                        <img src="assets/feather/menu.svg" alt="">
                    </div>
                </nav>
@@ -31,15 +31,15 @@
             </div>
         </header>
         <!-- ------- Menu ------- -->
-        <section class="menu" id="menu">
+        <section class="menu" id="menuPopup">
             <div class="menu_data">
                 <div class="container">
-                    <div class="cross_icon" onclick="crossPopup()"><img src="assets/feather/x.svg" alt=""></div>
+                    <div class="cross_icon" id="crossPopup"><img src="assets/feather/x.svg" alt=""></div>
                     <nav class="nav">
                         <ul class="nav_list">
-                            <li><a href="#" class="nav_link" onclick="allSection()">All</a></li>
-                            <li><a href="#" class="nav_link" onclick="onlyApp()">Apps</a></li>
-                            <li><a href="#" class="nav_link" onclick="onlyRecommended()">Computer</a></li>
+                            <li><a href="#" class="nav_link" id="allSection">All</a></li>
+                            <li><a href="#" class="nav_link" id="onlyApp">Apps</a></li>
+                            <li><a href="#" class="nav_link" id="onlyRecommended">Computer</a></li>
                             <li><a href="#" class="nav_link">Storage</a></li>
                             <li><a href="#" class="nav_link">Networking</a></li>
                             <li><a href="#" class="nav_link">Hosting</a></li>
@@ -259,7 +259,7 @@
                     <input type="search" class="search" id="search">
                     <div class="search_icon">
                         <i class='bx bx-microphone'></i>
-                        <i class='bx bx-image' onclick="searchImg()" ></i>
+                        <i class='bx bx-image' id="searchImg" ></i>
                         <i class='bx bx-search-alt-2'></i>
                     </div>
                     <ul class="form_list">
@@ -335,7 +335,7 @@
                 </div>
                 
                 
-                <div class="brose_content" onclick="broseUpload()">
+                <div class="brose_content" id="broseContent">
                     <div class="brose_add"><img src="assets/feather/plus-circle.svg" alt=""></div>
                     <div class="brose_link"><a href="#">Add shortcut </a></div>
                 </div>
@@ -350,7 +350,7 @@
                         <label for="url">URL</label>
                         <input type="url" id="url">
                         <div class="customize_btn">
-                            <div class="customize_close" onclick="broseUploadClose()">Close</div>
+                            <div class="customize_close" id="broseUploadClose">Close</div>
                             <div class="customize_close">Done</div>
                         </div>
                     </div>
@@ -363,9 +363,9 @@
         <div class="customize_popup" id="customizePopup">
             <div class="customize_data">
                 <ul class="customize_menu">
-                    <li onclick="customizeBg()"><img src="assets/feather/image.svg" alt=""> Background</li>
-                    <li onclick="customizeShortcuts()"><img src="assets/feather/link-2.svg" alt=""> Shortcuts</li>
-                    <li onclick="customizeColor()"><img src="assets/feather/image.svg" alt=""> Color and theme</li>
+                    <li id="customizeBg"><img src="assets/feather/image.svg" alt=""> Background</li>
+                    <li id="customizeShortcuts"><img src="assets/feather/link-2.svg" alt=""> Shortcuts</li>
+                    <li id="customizeColor"><img src="assets/feather/image.svg" alt=""> Color and theme</li>
                 </ul>
 
                 <div class="customize_Bg">
@@ -471,8 +471,6 @@
                                 <div class="theme_content"><img src="assets/img/gradienta6.jpg" alt=""></div>
                                 <div class="theme_content"><img src="assets/img/gradienta3.jpg" alt=""></div>
                                 <div class="theme_content"><img src="assets/img/gradienta4.jpg" alt=""></div>
-                                <div class="theme_content"><img src="assets/img/gradienta5.jpg" alt=""></div>
-                                <div class="theme_content"><img src="assets/img/gradienta6.jpg" alt=""></div>
                             </div>
                         </div>
 
@@ -486,7 +484,6 @@
         </div>
 
 
-    </div>
     <!-- ------- Footer ------- -->
     <footer>
         <div class="container">
@@ -504,11 +501,8 @@
 
         </div>
     </footer>
-        
     </div>
-
-
-     <script src="custom.js"></script>
+    <script src="custom.js"></script>
     
 </body>
 </html>

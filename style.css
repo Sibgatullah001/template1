@@ -78,11 +78,9 @@ header {
 
 
 /* ------- Menu ------- */
-.menu{
+.menu {
     position: absolute;
     max-width: 800px;
-    height: 95vh;
-    overflow-y: scroll;
     z-index: 2;
     top: 20px;
     left: 20px;
@@ -90,6 +88,9 @@ header {
     background-color: #d4ddec;
     display: none;
     font-size: 14px;
+}
+.active {
+    display: block;
 }
 .menu p{
     font-size: 11px;
@@ -319,7 +320,7 @@ header {
 /* ------- Customize browser------- */
 
 .customize_edit {
-    position: absolute;
+    position: fixed;
     right: 64px;
     bottom: 64px;
     display: flex;
@@ -620,7 +621,7 @@ header {
 }
 /* ------- Footer ------- */
 footer {
-    position: absolute;
+    position: fixed;
     width: 100%;
     bottom: 0;
     background: #f0f0f0;
@@ -630,12 +631,18 @@ footer span{
 }
 
 /* responsive */
+/* @media screen and (max-width: 992px){
+    .menu{
+        overflow-y: scroll;
+    }
+} */
 @media screen and (max-width: 768px){
     .nav_list{
         gap: 1rem;
     }
     .menu{
         margin-right: 20px;
+        overflow-y: scroll;
     }
     .recommended_item{
         width: 100%;
@@ -661,6 +668,9 @@ footer span{
     }
 }
 @media screen and (max-width: 576px){
+    .app_contents {
+        justify-content: center;
+    }
     .app_item {
         width: 93px;
         padding: 10px 0;
@@ -680,8 +690,18 @@ footer span{
     .broseUpload{
         max-width: 90%;
     }
+    .customize_data {
+        flex-direction: column;
+        align-items: center;
+    }
     .customize_edit{
         bottom: 100px;
+    }
+    .shortcut_contents {
+        justify-content: center;
+    }
+    .theme_contents {
+        justify-content: center;
     }
 }
 @media screen and (max-height: 576px){
