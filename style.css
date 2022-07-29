@@ -674,6 +674,9 @@ footer span{
     .customize_content {
         width: 92px;
     }
+    .brose_contents {
+        justify-content: center;
+    }
     .broseUpload{
         max-width: 90%;
     }
