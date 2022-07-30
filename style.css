@@ -185,7 +185,7 @@ header {
 }
 /* search */
 .searchs {
-    position: absolute;
+    position: fixed;
     width: 100%;
     top: 150px;
     z-index: 1;
@@ -503,10 +503,9 @@ header {
 
  /* browse add   */
 .brose_web {
-    padding-top: 243px;
+    padding-top: 10px;
     max-width: 560px;
     margin: 0 auto;
-    /* position: relative; */
 }
 .brose_contents{
     display: flex;
@@ -564,7 +563,6 @@ header {
 .browse_edit {
     background: #3c3c3c;
     position: absolute;
-    width: 160px;
     text-align: left;
     padding: 10px 0px;
     border-radius: 5px;
