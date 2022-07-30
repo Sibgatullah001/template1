@@ -23,7 +23,7 @@
                        </ul>
                    </div>
    
-                   <div class="nav_icon" id="toggleIcon">
+                   <div class="nav_icon" onclick="toggleIcon()">
                        <img src="assets/feather/menu.svg" alt="">
                    </div>
                </nav>
@@ -31,10 +31,10 @@
             </div>
         </header>
         <!-- ------- Menu ------- -->
-        <section class="menu" id="menuPopup">
-            <div class="menu_data">
+        <section class="menu" id="menuPopup" onclick="menuPopupAdd()">
+            <div class="menu_data" id="menuData">
                 <div class="container">
-                    <div class="cross_icon" id="crossPopup"><img src="assets/feather/x.svg" alt=""></div>
+                    <div class="cross_icon" onclick="crossPopup()"><img src="assets/feather/x.svg" alt=""></div>
                     <nav class="nav">
                         <ul class="nav_list">
                             <li><a href="#" class="nav_link" id="allSection">All</a></li>

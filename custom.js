@@ -1,19 +1,14 @@
-let toggleIcon = document.getElementById('toggleIcon');
-let menuPopup = document.getElementById('menuPopup');
-let crossPopup = document.getElementById('crossPopup');
-let wrap = document.getElementById('wrap');
 
-toggleIcon.onclick = function(){
+let menuPopup = document.getElementById('menuPopup');
+let menuData = document.getElementById('menuData');
+
+function toggleIcon(){
     menuPopup.classList.toggle('active');
 }
-crossPopup.onclick = function(){
-    menuPopup.classList.remove('active');
+function crossPopup(){
+    menuPopup.classList.toggle('active');
 }
-window.addEventListener('mouseup', function(e){
-    if(e.target !== menuPopup){
-        menuPopup.classList.remove('active');
-    }
-})
+
 
 
 
@@ -28,7 +23,6 @@ const appHeader = document.getElementById('app_data');
 
 const allSection = document.getElementById('allSection');
 allSection.onclick = function(){
-    menuPopup.classList.add('active');
     recommended.style.display = "block";
     appHeader.style.display = "block";
     apps.style.display = "none";
@@ -36,7 +30,6 @@ allSection.onclick = function(){
 
 const onlyApp = document.getElementById('onlyApp');
 onlyApp.onclick = function(){
-    menuPopup.classList.add('active');
     recommended.style.display = "none";
     appHeader.style.display = "none";
     apps.style.display = "block";
@@ -44,7 +37,6 @@ onlyApp.onclick = function(){
 
 const onlyRecommended = document.getElementById('onlyRecommended');
 onlyRecommended.onclick = function(){
-    menuPopup.classList.add('active');
     recommended.style.display = "block";
     appHeader.style.display = "none";
     apps.style.display = "none";
@@ -124,11 +116,11 @@ function customizeClose(){
     customizePopup.style.display = 'none';
 }
 
-window.addEventListener('mouseup', function(e){
-    if(e.target !== customizePopup){
-        customizePopup.style.display = 'none';
-    }
-})
+// window.addEventListener('mouseup', function(e){
+//     if(e.target !== customizePopup){
+//         customizePopup.style.display = 'none';
+//     }
+// })
 
 // browse show hidden
 // function broseMenuLIst(browse){
@@ -138,7 +130,7 @@ const broseMenu = document.getElementById('broseMenu');
 const browseEdit = document.getElementById('browseEdit');
 
 broseMenu.onclick = function (){
-    browseEdit.style.display = 'block';
+      browseEdit.style.display = 'block';
 }
 window.addEventListener('mouseup', function(e){
     if(e.target != browseEdit){
@@ -186,9 +178,9 @@ broseUploadClose.onclick = function(){
     broseUpload.style.display = 'none';
 }
 
-window.addEventListener('mouseup', function(e){
-    if(e.target != broseUpload){
-        broseUpload.style.display = 'none';
-    }
-})
+// window.addEventListener('mouseup', function(e){
+//     if(e.target != broseUpload){
+//         broseUpload.style.display = 'none';
+//     }
+// })
 

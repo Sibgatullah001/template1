@@ -331,6 +331,7 @@ header {
     border-radius: 20px;
     box-shadow: 0 0 4px gray;
     cursor: pointer;
+    z-index: 1;
 }
 .customize h4 img{
     color: #a0a2ff;
