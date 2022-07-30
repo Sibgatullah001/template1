@@ -573,9 +573,9 @@ header {
     color: #fff;
     display: none;
 }
-.browseEdit_show{
+/* .browseEdit_show{
     display: block;
-}
+} */
 .browse_edit h4 {
     padding: 10px 20px;
     cursor: pointer;

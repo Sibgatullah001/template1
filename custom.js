@@ -131,12 +131,44 @@ window.addEventListener('mouseup', function(e){
 })
 
 // browse show hidden
-function broseMenuLIst(browse){
+// function broseMenuLIst(browse){
     
+// }
+const broseMenu = document.getElementById('broseMenu');
+const browseEdit = document.getElementById('browseEdit');
+
+broseMenu.onclick = function (){
+    browseEdit.style.display = 'block';
 }
-function broseMenu() {
-    document.querySelector('.browse_edit').classList.toggle("browseEdit_show");
+window.addEventListener('mouseup', function(e){
+    if(e.target != browseEdit){
+        browseEdit.style.display = 'none';
+    }
+})
+
+const broseMenu2 = document.getElementById('broseMenu2');
+const browseEdit2 = document.getElementById('browseEdit2');
+
+broseMenu2.onclick = function (){
+    browseEdit2.style.display = 'block';
 }
+window.addEventListener('mouseup', function(e){
+    if(e.target != browseEdit2){
+        browseEdit2.style.display = 'none';
+    }
+})
+
+const broseMenu3 = document.getElementById('broseMenu3');
+const browseEdit3 = document.getElementById('browseEdit3');
+
+broseMenu3.onclick = function (){
+    browseEdit3.style.display = 'block';
+}
+window.addEventListener('mouseup', function(e){
+    if(e.target != browseEdit3){
+        browseEdit3.style.display = 'none';
+    }
+})
 
 
 
@@ -144,8 +176,8 @@ function broseMenu() {
 const broseUpload =document.getElementById('broseUpload');
 
 
-const broseContent =document.getElementById('broseContent');
-broseContent.onclick = function(){
+const broseContentAdd =document.getElementById('broseContentAdd');
+broseContentAdd.onclick = function(){
     broseUpload.style.display = 'block';
 }
 
