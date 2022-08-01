@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="wrap" id="wrap">
-        <!-- ------- Header ------- -->
+    <div class="wrap">
+        <!-- ===========================
+            Header
+        ======= -->
         <header>
             <div class="container">
                <nav class="nav">
@@ -30,230 +32,247 @@
                 
             </div>
         </header>
-        <!-- ------- Menu ------- -->
-        <section class="menu" id="menuPopup" onclick="menuPopupAdd()">
-            <div class="menu_data" id="menuData">
-                <div class="container">
-                    <div class="cross_icon" onclick="crossPopup()"><img src="assets/feather/x.svg" alt=""></div>
-                    <nav class="nav">
-                        <ul class="nav_list">
-                            <li><a href="#" class="nav_link" id="allSection">All</a></li>
-                            <li><a href="#" class="nav_link" id="onlyApp">Apps</a></li>
-                            <li><a href="#" class="nav_link" id="onlyRecommended">Computer</a></li>
-                            <li><a href="#" class="nav_link">Storage</a></li>
-                            <li><a href="#" class="nav_link">Networking</a></li>
-                            <li><a href="#" class="nav_link">Hosting</a></li>
-                        </ul>
-                    </nav>
-        
-                <div class="app">
-                    <div class="app_data" id="app_data">
-                     <h3>Top Apps</h3>
-                        <div class="app_contents" id="appHeader">
-                            <div class="app_item">
-                                <div class="app_icon"><i class='bx bx-envelope'></i></div>
-                                <h4>Gmail</h4>
-                            </div>
-                            <div class="app_item">
-                                <div class="app_icon"><i class='bx bxl-discord-alt'></i></div>
-                                <h4>Discord</h4>
-                            </div>
-                            <div class="app_item">
-                                <div class="app_icon"><i class='bx bxl-airbnb'></i></div>
-                                <h4>Airbnb</h4>
-                            </div>
-                            <div class="app_item">
-                                <div class="app_icon"><i class='bx bxl-slack'></i></div>
-                                <h4>Slack</h4>
-                            </div>
-                            
-                            <div class="app_item">
-                                <div class="app_icon"><i class='bx bxl-reddit' ></i></div>
-                                <h4>Reddit</h4>
-                            </div>
-                            <div class="app_item">
-                                <div class="app_icon"><i class='bx bxl-yahoo' ></i></div>
-                                <h4>Yahoo</h4>
-                            </div>
-                            <div class="app_item">
-                                <div class="app_icon"><i class='bx bxs-dog'></i></div>
-                                <h4>EverNote</h4>
-                            </div>
-                            <div class="app_item">
-                                <div class="app_icon"><i class='bx bxl-dropbox' ></i></div>
-                                <h4>Dropbox</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="apps" id="apps">
-                        <h3>Popular</h3>
-                        <div class="app_contents">
-                            <div class="app_item">
-                                <div class="app_icon"><i class='bx bx-envelope'></i></div>
-                                <h4>Gmail</h4>
-                            </div>
-                            <div class="app_item">
-                                <div class="app_icon"><i class='bx bxl-discord-alt'></i></div>
-                                <h4>Discord</h4>
-                            </div>
-                            <div class="app_item">
-                                <div class="app_icon"><i class='bx bxl-airbnb'></i></div>
-                                <h4>Airbnb</h4>
-                            </div>
-                            <div class="app_item">
-                                <div class="app_icon"><i class='bx bxl-slack'></i></div>
-                                <h4>Slack</h4>
-                            </div>
-                            
-                            <div class="app_item">
-                                <div class="app_icon"><i class='bx bxl-reddit' ></i></div>
-                                <h4>Reddit</h4>
-                            </div>
-                            <div class="app_item">
-                                <div class="app_icon"><i class='bx bxl-yahoo' ></i></div>
-                                <h4>Yahoo</h4>
-                            </div>
-                        </div>
+        <!-- ==================== /Header End ==================== -->
 
-                        
-                    <div class="all_app">
-                        <h3>All Apps</h3>
-                        <div class="app_contents">
-                            <div class="app_item">
-                                <div class="app_icon"><i class='bx bx-envelope'></i></div>
-                                <h4>Gmail</h4>
-                            </div>
-                            <div class="app_item">
-                                <div class="app_icon"><i class='bx bxl-discord-alt'></i></div>
-                                <h4>Discord</h4>
-                            </div>
-                            <div class="app_item">
-                                <div class="app_icon"><i class='bx bxl-airbnb'></i></div>
-                                <h4>Airbnb</h4>
-                            </div>
-                            <div class="app_item">
-                                <div class="app_icon"><i class='bx bxl-slack'></i></div>
-                                <h4>Slack</h4>
-                            </div>
-                            
-                            <div class="app_item">
-                                <div class="app_icon"><i class='bx bxl-reddit' ></i></div>
-                                <h4>Reddit</h4>
-                            </div>
-                            <div class="app_item">
-                                <div class="app_icon"><i class='bx bxl-yahoo' ></i></div>
-                                <h4>Yahoo</h4>
-                            </div>
-                            <div class="app_item">
-                                <div class="app_icon"><i class='bx bxs-dog'></i></div>
-                                <h4>EverNote</h4>
-                            </div>
-                            <div class="app_item">
-                                <div class="app_icon"><i class='bx bxl-dropbox' ></i></div>
-                                <h4>Dropbox</h4>
-                            </div>
-                            <div class="app_item">
-                                <div class="app_icon"><i class='bx bxl-discord-alt'></i></div>
-                                <h4>Discord</h4>
-                            </div>
-                            <div class="app_item">
-                                <div class="app_icon"><i class='bx bxl-airbnb'></i></div>
-                                <h4>Airbnb</h4>
-                            </div>
-                            <div class="app_item">
-                                <div class="app_icon"><i class='bx bxl-slack'></i></div>
-                                <h4>Slack</h4>
-                            </div>
-                            
-                            <div class="app_item">
-                                <div class="app_icon"><i class='bx bxl-reddit' ></i></div>
-                                <h4>Reddit</h4>
-                            </div>
-                            <div class="app_item">
-                                <div class="app_icon"><i class='bx bxl-yahoo' ></i></div>
-                                <h4>Yahoo</h4>
-                            </div>
-                            <div class="app_item">
-                                <div class="app_icon"><i class='bx bxs-dog'></i></div>
-                                <h4>EverNote</h4>
-                            </div>
-                            <div class="app_item">
-                                <div class="app_icon"><i class='bx bxl-dropbox' ></i></div>
-                                <h4>Dropbox</h4>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-        
-                <div class="recommended" id="recommended">
-                    <h3>Recommended</h3>
-                    <div class="recommended_contents">
-                        <div class="recommended_item">
-                            <div class="recommended_icon"><i class='bx bxs-cloud-lightning'></i></div>
-                            <div class="recommended_text">
-                                <h2>Virtual Private Server</h2>
-                                <p>Flexible virtual machines</p>
-                            </div>
-                        </div>
-                        <div class="recommended_item">
-                            <div class="recommended_icon"><i class='bx bxs-cloud-lightning'></i></div>
-                            <div class="recommended_text">
-                                <h2>Business Analysis</h2>
-                                <p>Start your host business</p>
-                            </div>
-                        </div>
-                        <div class="recommended_item">
-                            <div class="recommended_icon"><i class='bx bxs-cloud-lightning'></i></div>
-                            <div class="recommended_text">
-                                <h2>Dedicated Server</h2>
-                                <p>Powerful bare metal servers</p>
-                            </div>
-                        </div>
-                        <div class="recommended_item">
-                            <div class="recommended_icon"><i class='bx bxs-cloud-lightning'></i></div>
-                            <div class="recommended_text">
-                                <h2>Cloud Hosting</h2>
-                                <p>Flexible virtual machines</p>
-                            </div>
-                        </div>
-                        <div class="recommended_item">
-                            <div class="recommended_icon"><i class='bx bxs-cloud-lightning'></i></div>
-                            <div class="recommended_text">
-                                <h2>Data Security</h2>
-                                <p>Keep your data safe</p>
-                            </div>
-                        </div>
-                        <div class="recommended_item">
-                            <div class="recommended_icon"><i class='bx bxs-cloud-lightning'></i></div>
-                            <div class="recommended_text">
-                                <h2>Web Hosting</h2>
-                                <p>Start Hosting your website</p>
-                            </div>
-                        </div>
-                        <div class="recommended_item">
-                            <div class="recommended_icon"><i class='bx bxs-cloud-lightning'></i></div>
-                            <div class="recommended_text">
-                                <h2>Web Hosting</h2>
-                                <p>Start Hosting your website</p>
-                            </div>
-                        </div>
-                        <div class="recommended_item">
-                            <div class="recommended_icon"><i class='bx bxs-cloud-lightning'></i></div>
-                            <div class="recommended_text">
-                                <h2>Web Hosting</h2>
-                                <p>Start Hosting your website</p>
-                            </div>
-                        </div>
-        
-                    </div>
-                </div>
-            </div>
+        <!-- ===========================
+             MENU
+            ======= -->
+      <section class="menu" id="menuPopup" onclick="menuPopupAdd()">
+          <div class="menu_data" id="menuData">
+               <div class="container">
+                  <div class="cross_icon" onclick="crossPopup()"><img src="assets/feather/x.svg" alt=""></div>
+                  <nav class="nav">
+                      <ul class="nav_list">
+                          <li><a href="#" class="nav_link" id="allSection">All</a></li>
+                          <li><a href="#" class="nav_link" id="onlyApp">Apps</a></li>
+                          <li><a href="#" class="nav_link" id="onlyRecommended">Computer</a></li>
+                          <li><a href="#" class="nav_link">Storage</a></li>
+                          <li><a href="#" class="nav_link">Networking</a></li>
+                          <li><a href="#" class="nav_link">Hosting</a></li>
+                      </ul>
+                  </nav>
             
-            
-        </section>
+                  <!-- ======== App ========-->
+                  <div class="app">
+                      <!----- APP DATA  ----->
+                      <div class="app_data" id="app_data">
+                          <h3>Top Apps</h3>
+                          <div class="app_contents" id="appHeader">
+                              <div class="app_item">
+                                  <div class="app_icon"><i class='bx bx-envelope'></i></div>
+                                  <h4>Gmail</h4>
+                              </div>
+                              <div class="app_item">
+                                  <div class="app_icon"><i class='bx bxl-discord-alt'></i></div>
+                                  <h4>Discord</h4>
+                              </div>
+                              <div class="app_item">
+                                  <div class="app_icon"><i class='bx bxl-airbnb'></i></div>
+                                  <h4>Airbnb</h4>
+                              </div>
+                              <div class="app_item">
+                                  <div class="app_icon"><i class='bx bxl-slack'></i></div>
+                                  <h4>Slack</h4>
+                              </div>
+                              
+                              <div class="app_item">
+                                  <div class="app_icon"><i class='bx bxl-reddit' ></i></div>
+                                  <h4>Reddit</h4>
+                              </div>
+                              <div class="app_item">
+                                  <div class="app_icon"><i class='bx bxl-yahoo' ></i></div>
+                                  <h4>Yahoo</h4>
+                              </div>
+                              <div class="app_item">
+                                  <div class="app_icon"><i class='bx bxs-dog'></i></div>
+                                  <h4>EverNote</h4>
+                              </div>
+                              <div class="app_item">
+                                  <div class="app_icon"><i class='bx bxl-dropbox' ></i></div>
+                                  <h4>Dropbox</h4>
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <!-----  APPS  ----->
+                      <div class="apps" id="apps">
+                          <h3>Popular</h3>
+                          <div class="app_contents">
+                              <div class="app_item">
+                                  <div class="app_icon"><i class='bx bx-envelope'></i></div>
+                                  <h4>Gmail</h4>
+                              </div>
+                              <div class="app_item">
+                                  <div class="app_icon"><i class='bx bxl-discord-alt'></i></div>
+                                  <h4>Discord</h4>
+                              </div>
+                              <div class="app_item">
+                                  <div class="app_icon"><i class='bx bxl-airbnb'></i></div>
+                                  <h4>Airbnb</h4>
+                              </div>
+                              <div class="app_item">
+                                  <div class="app_icon"><i class='bx bxl-slack'></i></div>
+                                  <h4>Slack</h4>
+                              </div>
+                              
+                              <div class="app_item">
+                                  <div class="app_icon"><i class='bx bxl-reddit' ></i></div>
+                                  <h4>Reddit</h4>
+                              </div>
+                              <div class="app_item">
+                                  <div class="app_icon"><i class='bx bxl-yahoo' ></i></div>
+                                  <h4>Yahoo</h4>
+                              </div>
+                          </div>
 
-        <div class="searchs">
+                       
+                      <!-----  ALL APP  ----->
+                      <div class="all_app">
+                          <h3>All Apps</h3>
+                          <div class="app_contents">
+                              <div class="app_item">
+                                  <div class="app_icon"><i class='bx bx-envelope'></i></div>
+                                  <h4>Gmail</h4>
+                              </div>
+                              <div class="app_item">
+                                  <div class="app_icon"><i class='bx bxl-discord-alt'></i></div>
+                                  <h4>Discord</h4>
+                              </div>
+                              <div class="app_item">
+                                  <div class="app_icon"><i class='bx bxl-airbnb'></i></div>
+                                  <h4>Airbnb</h4>
+                              </div>
+                              <div class="app_item">
+                                  <div class="app_icon"><i class='bx bxl-slack'></i></div>
+                                  <h4>Slack</h4>
+                              </div>
+                              
+                              <div class="app_item">
+                                  <div class="app_icon"><i class='bx bxl-reddit' ></i></div>
+                                  <h4>Reddit</h4>
+                              </div>
+                              <div class="app_item">
+                                  <div class="app_icon"><i class='bx bxl-yahoo' ></i></div>
+                                  <h4>Yahoo</h4>
+                              </div>
+                              <div class="app_item">
+                                  <div class="app_icon"><i class='bx bxs-dog'></i></div>
+                                  <h4>EverNote</h4>
+                              </div>
+                              <div class="app_item">
+                                  <div class="app_icon"><i class='bx bxl-dropbox' ></i></div>
+                                  <h4>Dropbox</h4>
+                              </div>
+                              <div class="app_item">
+                                  <div class="app_icon"><i class='bx bxl-discord-alt'></i></div>
+                                  <h4>Discord</h4>
+                              </div>
+                              <div class="app_item">
+                                  <div class="app_icon"><i class='bx bxl-airbnb'></i></div>
+                                  <h4>Airbnb</h4>
+                              </div>
+                              <div class="app_item">
+                                  <div class="app_icon"><i class='bx bxl-slack'></i></div>
+                                  <h4>Slack</h4>
+                              </div>
+                              
+                              <div class="app_item">
+                                  <div class="app_icon"><i class='bx bxl-reddit' ></i></div>
+                                  <h4>Reddit</h4>
+                              </div>
+                              <div class="app_item">
+                                  <div class="app_icon"><i class='bx bxl-yahoo' ></i></div>
+                                  <h4>Yahoo</h4>
+                              </div>
+                              <div class="app_item">
+                                  <div class="app_icon"><i class='bx bxs-dog'></i></div>
+                                  <h4>EverNote</h4>
+                              </div>
+                              <div class="app_item">
+                                  <div class="app_icon"><i class='bx bxl-dropbox' ></i></div>
+                                  <h4>Dropbox</h4>
+                              </div>
+                          </div>
+                      </div>
+                      </div>
+                  </div>
+                  <!-- ======== /App ======== -->
+
+                  <!-- ======== RECOMMENDED ======== -->
+                  <div class="recommended" id="recommended">
+                      <h3>Recommended</h3>
+                      <div class="recommended_contents">
+                          <div class="recommended_item">
+                              <div class="recommended_icon"><i class='bx bxs-cloud-lightning'></i></div>
+                              <div class="recommended_text">
+                                  <h2>Virtual Private Server</h2>
+                                  <p>Flexible virtual machines</p>
+                              </div>
+                          </div>
+                          <div class="recommended_item">
+                              <div class="recommended_icon"><i class='bx bxs-cloud-lightning'></i></div>
+                              <div class="recommended_text">
+                                  <h2>Business Analysis</h2>
+                                  <p>Start your host business</p>
+                              </div>
+                          </div>
+                          <div class="recommended_item">
+                              <div class="recommended_icon"><i class='bx bxs-cloud-lightning'></i></div>
+                              <div class="recommended_text">
+                                  <h2>Dedicated Server</h2>
+                                  <p>Powerful bare metal servers</p>
+                              </div>
+                          </div>
+                          <div class="recommended_item">
+                              <div class="recommended_icon"><i class='bx bxs-cloud-lightning'></i></div>
+                              <div class="recommended_text">
+                                  <h2>Cloud Hosting</h2>
+                                  <p>Flexible virtual machines</p>
+                              </div>
+                          </div>
+                          <div class="recommended_item">
+                              <div class="recommended_icon"><i class='bx bxs-cloud-lightning'></i></div>
+                              <div class="recommended_text">
+                                  <h2>Data Security</h2>
+                                  <p>Keep your data safe</p>
+                              </div>
+                          </div>
+                          <div class="recommended_item">
+                              <div class="recommended_icon"><i class='bx bxs-cloud-lightning'></i></div>
+                              <div class="recommended_text">
+                                  <h2>Web Hosting</h2>
+                                  <p>Start Hosting your website</p>
+                              </div>
+                          </div>
+                          <div class="recommended_item">
+                              <div class="recommended_icon"><i class='bx bxs-cloud-lightning'></i></div>
+                              <div class="recommended_text">
+                                  <h2>Web Hosting</h2>
+                                  <p>Start Hosting your website</p>
+                              </div>
+                          </div>
+                          <div class="recommended_item">
+                              <div class="recommended_icon"><i class='bx bxs-cloud-lightning'></i></div>
+                              <div class="recommended_text">
+                                  <h2>Web Hosting</h2>
+                                  <p>Start Hosting your website</p>
+                              </div>
+                          </div>
+            
+                      </div>
+                  </div>
+                 <!-- ======== /Recommended ======== -->
+              </div>
+          </div>
+      </section>
+      <!-- ==================== /Menu  End ==================== -->
+
+       <!-- ===========================
+            Searches
+        ======= -->
+        <div class="Searches">
+
+            <!-- ----- Search Box ----- -->
             <div class="search_box">
                 <form action="" class="search_form">
                     <input type="search" class="search" id="search">
@@ -266,6 +285,13 @@
                         <li><span></span></li>
                     </ul>
                 </form>
+               <!-- <ul class="search_suggestion" id="searchList">
+                   <li>Lorem ipsum dolor sit amet.</li>
+                   <li>Lorem ipsum dolor sit amet.</li>
+                   <li>Lorem ipsum dolor sit amet.</li>
+               </ul> -->
+
+                <!-- ----- Search Popup ----- -->
                 <div class="search_popup" id="searchPopup">
                     <div class="search_cors" onclick="searchImgClose()">X</div>
                     <div class="sbiIdc"></div>
@@ -279,7 +305,6 @@
                             <div class="drop_ab">OR</div>
                             <div class="dropzone_url">
                                 <input type="url" placeholder="Past image or URL">
-                                <!-- <p><img src="assets/feather/clipboard.svg" alt=""> Past image or URL</p> -->
                             </div>
                         </div>
                         <p>Click a sample image to try it</p>
@@ -295,14 +320,9 @@
                         </div>
                     </div>
                 </div>
-               <!-- <ul class="search_list" id="searchList">
-                   <li>Lorem ipsum dolor sit amet.</li>
-                   <li>Lorem ipsum dolor sit amet.</li>
-                   <li>Lorem ipsum dolor sit amet.</li>
-               </ul> -->
             </div>
 
-            <!-- browse add  -->
+           <!-----  Brose Web  ----->
             <div class="brose_web">
               <div class="brose_contents">
                    <div class="brose_content" id="broseContent">
@@ -332,37 +352,47 @@
                            <h4>Remove</h4>
                        </div>
                    </div>
-                   
-                   
                    <div class="brose_content" id="broseContentAdd">
                        <div class="brose_add"><img src="assets/feather/plus-circle.svg" alt=""></div>
                        <div class="brose_link"><a href="#">Add shortcut </a></div>
                    </div>
                </div>
            </div>
-
         </div>
+        <!-- ==================== /Searches  End ==================== -->
 
 
-                <div class="broseUpload" id="broseUpload">
-                    <div class="broseUpload_data">
-                        <h3>Add shortcut</h3>
-                        <label for="name">Name</label>
-                        <input type="text"  id="name">
-    
-                        <label for="url">URL</label>
-                        <input type="url" id="url">
-                        <div class="customize_btn">
-                            <div class="customize_close" id="broseUploadClose">Close</div>
-                            <div class="customize_close">Done</div>
-                        </div>
-                    </div>
+     <!-- ===========================
+        BROSE UPLOAD
+        ======= -->
+        <div class="broseUpload" id="broseUpload">
+            <div class="broseUpload_data">
+                <h3>Add shortcut</h3>
+                <label for="name">Name</label>
+                <input type="text"  id="name">
+                <label for="url">URL</label>
+                <input type="url" id="url">
+                <div class="customize_btn">
+                    <div class="customize_close" id="broseUploadClose">Close</div>
+                    <div class="customize_close">Done</div>
                 </div>
+            </div>
+        </div>
+        <!-- ==================== /Brose Upload End  ==================== -->
 
+
+     <!-- ===========================
+        CUSTOMIZE EDIT
+        ======= -->
         <div class="customize_edit" onclick="customizeEdit()">
             <img src="assets/feather/edit-2.svg" alt=""><Span>Customize Chrome</Span>
         </div>
+        <!-- ==================== /Customize Edit End  ==================== -->
+
         
+     <!-- ===========================
+        CUSTOMIZE POPUP
+        ======= -->
         <div class="customize_popup" id="customizePopup">
             <div class="customize_data">
                 <ul class="customize_menu">
@@ -375,6 +405,8 @@
                     <h4>Customize this page</h4>
 
                     <div class="customize_shortcut">
+
+                        <!-- ======= Customize Contents ======= -->
                         <div  id="customizeContents">
                            <div class="customize_contents">
                                <div class="customize_content upload">
@@ -410,9 +442,9 @@
                                    <h5>Lorem, ipsum</h5>
                                </div>
                            </div>
-
                         </div>
     
+                        <!-- ======= Shortcut ======= -->
                         <div class="shortcut" id="shortcut">
                             <div class="shortcut_contents">
                                 <div class="shortcut_contents_data">
@@ -428,7 +460,6 @@
                                     <p>shortcuts are curated by you</p>
                                 </div>
                                 
-    
                                 <div class="shortcut_contents_data">
                                    <div class="shortcut_content">
                                        <div class="shortcut_browser">
@@ -443,17 +474,20 @@
                                 </div>
                            </div>
 
+                           <!-- ----- Shortcut Hide/Show ----- -->
                            <div class="shortcut_hide">
-                            <img src="assets/feather/eye-off.svg" alt="">
-                            <div>
-                                <h4>Hide shortcuts</h4>
-                                <p>Don't show shortcuts on this page</p> 
-                            </div>
-                            <div class="shortcut_toggle">
-                                <img src="assets/feather/toggle-left.svg" alt="">
-                            </div> 
+                               <img src="assets/feather/eye-off.svg" alt="">
+                               <div>
+                                   <h4>Hide shortcuts</h4>
+                                   <p>Don't show shortcuts on this page</p> 
+                               </div>
+                               <div class="shortcut_toggle">
+                                   <img src="assets/feather/toggle-left.svg" alt="">
+                               </div> 
                            </div>
                         </div>
+
+                        <!-- ======= Customize Theme ======= -->
                         <div class="customize_theme" id="customizeTheme">
                             <div class="theme_contents">
                                 <div class="theme_content theme_edit"><img src="assets/feather/edit-2.svg" alt=""></div>
@@ -480,31 +514,43 @@
                     </div>
                 </div>
             </div>
-                    <div class="customize_btn">
-                        <div class="customize_close" onclick="customizeClose()">Close</div>
-                        <div class="customize_close">Done</div>
-                    </div>
+
+            <!-- ----- Customize Btn ----- -->
+            <div class="customize_btn">
+                <div class="customize_close" onclick="customizeClose()">Close</div>
+                <div class="customize_close">Done</div>
+            </div>
+
         </div>
-
-
-    <!-- ------- Footer ------- -->
-    <footer>
-        <div class="container">
-           <div class="nav">
-               <ul class="nav_list">
-                   <li><a href="#">Contact</a></li>
-                   <li><a href="#">About</a></li>
-                   <li><a href="#">Admin</a></li>
-               </ul>
-   
-               <div class="copy_write">
-                   <p>Powered by phpSearch <span> @2019 phpSearch</span></p>
+        <!-- ==================== /Customize Popup  End ==================== -->
+ 
+         
+        <!-- ===========================
+            FOOTER
+        ======= -->
+        <footer>
+            <div class="container">
+               <div class="nav">
+                   <ul class="nav_list">
+                       <li><a href="#">Contact</a></li>
+                       <li><a href="#">About</a></li>
+                       <li><a href="#">Admin</a></li>
+                   </ul>
+        
+                   <div class="copy_write">
+                       <p>Powered by phpSearch <span> @2019 phpSearch</span></p>
+                   </div>
                </div>
-           </div>
 
-        </div>
-    </footer>
-    </div>
+            </div>
+        </footer>
+        <!-- ==================== /Footer  End ==================== -->
+
+   </div>
+    
+    <!-- ===========================
+        CUSTOM JS
+    ======= -->
     <script src="custom.js"></script>
     
 </body>

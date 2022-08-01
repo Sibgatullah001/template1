@@ -1,3 +1,31 @@
+/* 
+<<-- Comment Section -->>
+
+  -01 Google Fonts 
+  -02 BASIC CSS 
+  -03 Header 
+  -04 Menu
+  -05 App
+  -06 Apps
+  -07 Recommended
+  -08 Searches
+  -09 Search Box
+  -10 Search Suggestion
+  -11 Search Popup 
+  -12 Brose Web
+  -13 Brose Upload
+  -14 Customize Edit
+  -15 Customize Popup
+  -16 Shortcut
+  -17 Customize Theme 
+  -18 Footer
+  -19 Responsive
+
+
+ */
+/* ======================
+ Google Fonts 
+=========== */
 @font-face {
     font-family: 'Nunito Sans', sans-serif;
     src:url('assets/Nunito_Sans/NunitoSans-Regular.ttf'), 
@@ -9,10 +37,24 @@
          url('assets/Nunito_Sans/NunitoSans-SemiBold.ttf')
 }
 
+/* ======================
+ Root/CSS Variable
+=========== */
+:root{
+    --primary-color: #f0f0f0;
+    --primary-color-light: #bcc4d1;
+    --secondary-color: #0000ff;
+    --secondary-color-light: #4949ff;
+    --body-color: #fff;
+    --dark-color: #464646;
+}
+/* ======================
+ BASIC CSS 
+=========== */
 body{
     margin: 0;
-    color: #464646;
-    background: #fff;
+    color: var(--dark-color);
+    background: var(--body-color);
     font-family: 'Nunito Sans', sans-serif;
 }
 h1,h2,h3,h4,h5,p{
@@ -32,16 +74,19 @@ ul{
     margin: 0 auto;
 }
 
-/* ------- header ------- */
 .wrap {
     position: relative;
     height: 100vh;
 }
+
+/* =================================
+   Header 
+=========== */
 header {
     position: absolute;
     width: 100%;
     top: 0;
-    background-color: #f0f0f0;
+    background-color: var(--primary-color);
 }
 
 .nav, .nav_list{
@@ -60,14 +105,15 @@ header {
     transition: .4s;
 }
 .nav_link:hover{
-    color: #1fc51f;
+    color: var(--secondary-color);
 }
 .nav_link:hover::after{
     position: absolute;
     content: '';
-    width: 20px;
+    width: 25px;
     height: 3px;
-    background-color: #1fc51f;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
     bottom: 0;
     left: 50%;
     transform: translate(-50%);
@@ -75,9 +121,11 @@ header {
 .nav_icon img{
     cursor: pointer;
 }
+/* =========== Heder end =========== */
 
-
-/* ------- Menu ------- */
+/* =================================
+   Menu 
+=========== */
 .menu {
     position: absolute;
     max-width: 800px;
@@ -85,7 +133,7 @@ header {
     top: 20px;
     left: 20px;
     border-radius: 10px;
-    background-color: #d4ddec;
+    background-color: var(--primary-color-light);
     display: none;
     font-size: 14px;
 }
@@ -112,19 +160,23 @@ header {
     justify-content: end;
 }
 .cross_icon img {
-    background-color: #fff;
+    background-color: var(--body-color);
     border-radius: 50%;
     width: 23px;
     cursor: pointer;
     padding: 3px;
 }
 .menu .nav_link:hover::after{
-    background-color: #3b3bf5;
+    background-color: var(--secondary-color);
     height: 4px;
     width: 25px;
     border-radius: 15px;
 }
-/* app  */
+/* =========== Menu end =========== */
+
+/* =================================
+   App 
+=========== */
 .app_contents{
     display: flex;
     flex-wrap: wrap;
@@ -133,20 +185,24 @@ header {
 .app_item{
     width: 160px;
     padding: 25px 0;
-    background-color: #f0f0f0;
+    background-color: var(--primary-color);
     text-align: center;
     border-radius: 5px;
     transition: .5s;
     cursor: pointer;
 }
 .app_item:hover{
-    background-color: #ffffff;
+    background-color: var(--body-color);
 }
 .app i , .recommended i{
     font-size: 40px;
-    color: red;
+    color: var(--secondary-color-light);
 }
-/* Apps */
+/* =========== App end =========== */
+
+/* =================================
+   Apps 
+=========== */
 .apps{
     display: none;
 }
@@ -156,9 +212,13 @@ header {
     background: none;
 }
 .all_app .app_item:hover{
-    background-color: #fff;
+    background-color: var(--body-color);
 }
-/* ------- recommended ------- */
+/* =========== Apps end =========== */
+
+/* =================================
+   Recommended 
+=========== */
 .app_contents, .recommended{
     padding: 20px 0;
 }
@@ -180,22 +240,28 @@ header {
     transition: .6s;
 }
 .recommended_item:hover{
-    background-color: #fff;
+    background-color: var(--body-color);
     border-radius: 10px;
 }
-/* search */
-.searchs {
+/* =========== Recommended end =========== */
+/* =================================
+   Searches 
+=========== */
+.Searches {
     position: fixed;
     width: 100%;
     top: 150px;
     z-index: 1;
 }
+/* =================================
+   Search Box
+=========== */
 .search_box {
     position: relative;
     max-width: 550px;
     margin: 0 auto;
-    background: #fff;
-    padding: 10px;
+    background: var(--body-color);
+    padding: 5px 0px 3px 10px;
     border-radius: 10px;
     box-shadow: 0 0 4px gray;
 }
@@ -206,7 +272,7 @@ header {
 .search {
     outline: none;
     border: none;
-    background: #fff;
+    background: var(--body-color);
     width: 75%;
     padding: 8px 10px;
     font-size: 15px;
@@ -217,23 +283,28 @@ header {
     font-size: 30px;
     cursor: pointer;
 }
+/* =========== Search Box end =========== */
 
-/* search Suggestion */
-.search_list{
-    border-bottom: 1px solid #d1d1d1;
-    border-top: 1px solid #d1d1d1;
+/* =================================
+   Search Suggestion 
+=========== */
+.search_suggestion{
+    border-bottom: 1px solid var(--primary-color-light);
+    border-top: 1px solid var(--primary-color-light);
 }
-.search_list li {
+.search_Suggestion li {
     padding: 8px 10px;
     cursor: pointer;
     margin: 5px 0;
 }
+/* =========== Search Suggestion end =========== */
 
-
-/* search_popup */
+/* =================================
+   Search Popup 
+=========== */
 .search_popup {
     max-width: 380px;
-    background: #f6f6f6;
+    background: var(--primary-color);
     text-align: center;
     padding: 20px 10px;
     position: absolute;
@@ -260,13 +331,13 @@ header {
     display: block;
     width: 20px;
     height: 20px;
-    background: #f6f6f6;
+    background: var(--primary-color);
     transform: rotate(45deg);
     top: -10px;
     right: 80px;
 }
 .dropzone {
-    background: #e3e3e3;
+    background: var(--body-color);
     border: 2px dashed #b5b5b5;
     padding: 14px 5px;
     margin: 15px 5px;
@@ -284,7 +355,7 @@ header {
     width: 35%;
     height: 1px;
     top: 50%;
-    background: #c1c1c1;
+    background: var(--primary-color-light);
     right: 20px;
 }
 .drop_ab::before {
@@ -294,11 +365,11 @@ header {
     width: 35%;
     height: 1px;
     top: 50%;
-    background: #c1c1c1;
+    background: var(--primary-color-light);
     left: 20px;
 }
 .dropzone_url input {
-    background: white;
+    background: var(--body-color);
     padding: 10px;
     border: 1px solid #bdbdbd;
     border-radius: 5px;
@@ -317,8 +388,131 @@ header {
     border-radius: 4px;
     cursor: pointer;
 }
-/* ------- Customize browser------- */
+/* =========== Search Popup end =========== */
 
+/* =================================
+   Brose Web
+=========== */
+.brose_web {
+    padding-top: 10px;
+    max-width: 560px;
+    margin: 0 auto;
+}
+.brose_contents{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.brose_content {
+    position: relative;
+    width: 125px;
+    height: 130px;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 15px;
+    transition: .5s;
+    cursor: pointer;
+}
+.brose_content:hover {
+    background: var(--primary-color-light);
+}
+.brose_head {
+    background: var(--primary-color);
+    border-radius: 50%;
+    padding: 13px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto;
+}
+
+.brose_head h4 {
+    background: var(--dark-color);
+    border-radius: 50%;
+    padding: 0px;
+    color: var(--body-color);
+}
+.brose_link {
+    margin-top: 20px;
+    font-weight: 600;
+}
+.brose_menu {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    padding: 0px 2px;
+    opacity: 0;
+}
+.brose_menu:hover {
+    background: var(--body-color);
+    border-radius: 50%;
+}
+.brose_content:hover .brose_menu{
+    opacity: 1;
+}
+.browse_edit {
+    background: var(--dark-color);
+    position: absolute;
+    text-align: left;
+    padding: 10px 0px;
+    border-radius: 5px;
+    top: 30px;
+    left: -14px;
+    color: var(--body-color);
+    display: none;
+}
+.browse_edit h4 {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.browse_edit h4:hover{
+    background-color: gray;
+}
+.brose_add img {
+    width: 50px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+/* =========== Brose Web end =========== */
+/* =========== Searches end =========== */
+
+/* =================================
+   Brose Upload
+=========== */
+.broseUpload {
+    position: absolute;
+    width: 560px;
+    top: 150px;
+    z-index: 1;
+    background: white;
+    box-shadow: 0 0 4px gray;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    display: none;
+}
+.broseUpload_data{
+    padding: 30px 30px 0 30px;
+}
+.broseUpload_data h3 {
+    padding-bottom: 20px;
+}
+.broseUpload input {
+    width: 100%;
+    margin: 7px 0 20px;
+    padding: 6px 5px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    outline: none;
+}
+.broseUpload_data .customize_btn{
+    margin-bottom: 20px;
+}
+/* =========== Brose Upload end =========== */
+
+/* =================================
+   Customize Edit
+=========== */
 .customize_edit {
     position: fixed;
     right: 64px;
@@ -326,18 +520,21 @@ header {
     display: flex;
     align-items: center;
     gap: 7px;
-    background: #fff;
+    background: var(--body-color);
     padding: 8px 20px;
     border-radius: 20px;
     box-shadow: 0 0 4px gray;
     cursor: pointer;
     z-index: 1;
 }
-.customize h4 img{
+/* .customize h4 img{
     color: #a0a2ff;
-}
+} */
+/* =========== Customize Edit end =========== */
 
-/* customize Popup  */
+/* =================================
+   Customize Popup
+=========== */
 .customize_popup{
     position: absolute;
     width: 768px;
@@ -346,7 +543,7 @@ header {
     transform: translate(-50%, -50%);
     display: none;
     z-index: 1;
-    background: #fff;
+    background: var(--body-color);
     box-shadow: 0 0 4px gray;
     padding: 20px;
 }
@@ -363,7 +560,7 @@ header {
     margin-top: 20px;
 }
 .customize_menu li {
-    background: #eaeaea;
+    background: var(--primary-color-light);
     box-shadow: 0 0 4px gray;
     padding: 7px 0 10px 10px;
     border-radius: 20px;
@@ -399,14 +596,17 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #cecece;
+    background: var(--primary-color-light);
     margin-bottom: 30px;
 }
 .upload img {
     width: 50px;
 }
+/* =========== Customize Popup end =========== */
 
-/* browser */
+/* =================================
+   Shortcut
+=========== */
 .shortcut, .customize_theme{
     display: none;
 }
@@ -424,18 +624,18 @@ header {
     justify-content: center;
     border-radius: 10px;
     transition: .5s;
-    border: 1px solid #6f6fff;
+    border: 1px solid var(--secondary-color-light);
     position: relative;
     z-index: 0;
 }
 .shortcut_content:hover {
-    background: #1d1c2285;
+    background: var(--dark-color);
 }
 .shortcut_browser {
     display: flex;
     flex-direction: column;
     width: 80px;
-    background: #373737;
+    background: var(--dark-color);
     gap: 30px;
     padding: 20px;
     border: 2px solid #465c71;
@@ -453,7 +653,7 @@ header {
 .shortcut_check {
     position: absolute;
     right: 35px;
-    background: #bdbdbd;
+    background: var(--primary-color-light);
     border-radius: 50%;
     padding: 0px 2px;
     top: 9px;
@@ -462,9 +662,9 @@ header {
     display: flex;
     align-items: center;
     gap: 35px;
-    background: #6f6f6f;
+    background: var(--primary-color-light);
     padding: 5px 20px 15px;
-    color: white;
+    color: var(--dark-color);
     margin: 20px 0;
     border-radius: 10px;
     position: relative;
@@ -473,6 +673,11 @@ header {
     position: absolute;
     right: 25px;
 }
+/* =========== Shortcut end =========== */
+
+/* =================================
+   Customize Theme 
+=========== */
 .theme_contents {
     display: flex;
     gap: 20px;
@@ -483,7 +688,7 @@ header {
 }
 .theme_edit img {
     padding: 25px;
-    background: #c1c1c1;
+    background: var(--primary-color-light);
 }
 
 .customize_btn {
@@ -499,142 +704,28 @@ header {
     cursor: pointer;
 }
 .customize_btn div:hover {
-    background-color: #cccccc;
+    background-color: var(--primary-color-light);
 }
+/* =========== Customize Theme  end =========== */
 
- /* browse add   */
-.brose_web {
-    padding-top: 10px;
-    max-width: 560px;
-    margin: 0 auto;
-}
-.brose_contents{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-.brose_content {
-    position: relative;
-    width: 125px;
-    height: 130px;
-    border-radius: 5px;
-    text-align: center;
-    padding-top: 15px;
-    transition: .5s;
-    cursor: pointer;
-}
-.brose_content:hover{
-    background: gray;
-    color: #fff;
-}
-.brose_head {
-    background: #9e9e9e;
-    border-radius: 50%;
-    padding: 13px;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    margin: 0 auto;
-}
-
-.brose_head h4 {
-    background: #ff523b;
-    border-radius: 50%;
-    padding: 0px;
-    color: #fff;
-}
-.brose_link {
-    margin-top: 20px;
-    font-weight: 600;
-}
-.brose_menu {
-    position: absolute;
-    top: 3px;
-    right: 3px;
-    padding: 0px 2px;
-    opacity: 0;
-}
-.brose_menu:hover {
-    background: #b9b9b9;
-    border-radius: 50%;
-}
-.brose_content:hover .brose_menu{
-    opacity: 1;
-}
-.browse_edit {
-    background: #3c3c3c;
-    position: absolute;
-    text-align: left;
-    padding: 10px 0px;
-    border-radius: 5px;
-    top: 30px;
-    left: -14px;
-    color: #fff;
-    display: none;
-}
-/* .browseEdit_show{
-    display: block;
-} */
-.browse_edit h4 {
-    padding: 10px 20px;
-    cursor: pointer;
-}
-.browse_edit h4:hover{
-    background-color: gray;
-}
-.brose_add img {
-    width: 50px;
-    margin-top: 10px;
-    cursor: pointer;
-}
-
-/* broseUpload */
-.broseUpload {
-    position: absolute;
-    width: 560px;
-    top: 150px;
-    z-index: 1;
-    background: white;
-    box-shadow: 0 0 4px gray;
-    border-radius: 10px;
-    left: 50%;
-    transform: translate(-50%);
-    display: none;
-}
-.broseUpload_data{
-    padding: 30px 30px 0 30px;
-}
-.broseUpload_data h3 {
-    padding-bottom: 20px;
-}
-.broseUpload input {
-    width: 100%;
-    margin: 7px 0 20px;
-    padding: 6px 5px;
-    border-radius: 5px;
-    border: 1px solid gray;
-    outline: none;
-}
-.broseUpload_data .customize_btn{
-    margin-bottom: 20px;
-}
-/* ------- Footer ------- */
+/* =================================
+   Footer
+=========== */
 footer {
     position: fixed;
     width: 100%;
     bottom: 0;
-    background: #f0f0f0;
+    background: var(--primary-color);
 }
 footer span{
     padding-left: 10px;
 }
+/* =========== Footer end =========== */
 
+/* =================================
+   Responsive
+=========== */
 /* responsive */
-/* @media screen and (max-width: 992px){
-    .menu{
-        overflow-y: scroll;
-    }
-} */
 @media screen and (max-width: 768px){
     .nav_list{
         gap: 1rem;
@@ -715,3 +806,5 @@ footer span{
         padding: 0 10px;
     }
 }
+
+/* =========== Responsive end =========== */
